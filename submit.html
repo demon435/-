@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>提交作品</title>
+  <style>
+    body { max-width: 400px; margin: 2em auto; font-family: sans-serif; }
+    input, button { display: block; width: 100%; margin-top: 1em; padding: 0.5em; }
+  </style>
+</head>
+<body>
+  <h2>提交作品</h2>
+  <form onsubmit="handleSubmit(event)">
+    <input type="url" placeholder="GitHub 仓库地址" required id="repo" />
+    <input type="url" placeholder="Vercel 在线体验地址" required id="vercel" />
+    <button type="submit">提交作品</button>
+  </form>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const repo = document.getElementById('repo').value;
+      const vercel = document.getElementById('vercel').value;
+      console.log({ repo, vercel });
+      alert('感谢你的提交！');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>接受</title>
+  <style>
+    body { max-width: 400px; margin: 2em auto; font-family: sans-serif; }
+    input, button { display: block; width: 100%; margin-top: 1em; padding: 0.5em; }
+  </style>
+</head>
+<body>
+  <h2>接受挑战</h2>
+  <form onsubmit="handleSubmit(event)">
+    <input type="text" placeholder="GitHub ID" required id="github" />
+    <input type="email" placeholder="邮箱" required id="email" />
+    <button type="submit">接受挑战</button>
+  </form>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const github = document.getElementById('github').value;
+      const email = document.getElementById('email').value;
+      console.log({ github, email });
+      window.location.href = "submit.html";
+    }
+  </script>
+</body>
+</html>
