@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "interview/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/interview/welcome.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/interview/$1"
+    }
+  ]
+}
